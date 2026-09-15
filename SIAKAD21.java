@@ -21,7 +21,11 @@ public class SIAKAD21 {
         System.out.print("Masukkan nilai ujian: ");
         double ujian = sc.nextDouble();
 
-        double nilaiAkhir = (kuis + tugas + ujian) / 3;
+        double bobotKuis = 0.30;
+        double bobotUjian = 0.30;
+        double bobotTugas = 0.40;
+
+        double nilaiAkhir = (kuis * bobotKuis) + (ujian * bobotUjian) + (tugas * bobotTugas);
 
         String huruf;
         String kualifikasi;
@@ -51,6 +55,9 @@ public class SIAKAD21 {
 
         System.out.println(
         "Mahasiswa dengan nama " + nama + " (NIM " + nim + ") kelas " + kelas + " nomor absen " + absen);
+        System.out.println("Nilai kuis (30%): " + (kuis * bobotKuis));
+        System.out.println("Nilai ujian (30%): " + (ujian * bobotUjian));
+        System.out.println("Nilai tugas (40%): " + (tugas * bobotTugas));
         System.out.println("Nilai akhir: " + nilaiAkhir);
         System.out.println("Nilai akhir huruf: " + huruf);
         System.out.println("Kualifikasi: " + kualifikasi);
